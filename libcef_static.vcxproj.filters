@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\cef">
+      <UniqueIdentifier>{68212125-9436-8D5B-CA14-3AE2AEDE6E5C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\cef\grit">
+      <UniqueIdentifier>{3405616A-C381-F382-5E74-579CB4F91A2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\internal">
+      <UniqueIdentifier>{1D4CEA7C-B637-77CF-7A24-85ABD36F82A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libcef">
+      <UniqueIdentifier>{B1E423E1-C102-C975-CB7E-93EAF0090EB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libcef\printing">
+      <UniqueIdentifier>{7C256FC4-67A4-3160-9AC3-FAF60A22B169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content">
+      <UniqueIdentifier>{4D624FB1-28CC-8F22-E07A-F14373BC38A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\public\common">
+      <UniqueIdentifier>{2F5FD094-EF52-77F7-7AA8-4327A01BF747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\public\browser">
+      <UniqueIdentifier>{24B57E1E-8660-A3AB-E8EF-7828EB881EF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\common">
+      <UniqueIdentifier>{2F5FD094-EF52-77F7-7AA8-4327A01BF747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\common\net">
+      <UniqueIdentifier>{1F653D5C-3085-E5B1-C9CA-3B1D0CF99BB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\browser">
+      <UniqueIdentifier>{24B57E1E-8660-A3AB-E8EF-7828EB881EF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\browser\geolocation">
+      <UniqueIdentifier>{42EA6ED6-A702-DB69-AED0-ED93767C1994}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\content\browser\net">
+      <UniqueIdentifier>{1F653D5C-3085-E5B1-C9CA-3B1D0CF99BB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\google_apis">
+      <UniqueIdentifier>{7DF2F418-4014-753B-6B04-6DE61E16D204}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cef.gyp"/>
+    <ClCompile Include="$(OutDir)obj\global_intermediate\cef\grit\devtools_resources_map.cc">
+      <Filter>$(OutDir)obj\global_intermediate\cef\grit</Filter>
+    </ClCompile>
+    <ClInclude Include="include\cef_request.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_drag_data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_proxy_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_cookie.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_frame.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_app.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_life_span_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_scheme.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_web_plugin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_load_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_print_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_v8context_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_runnable.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_base.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_nplugin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_geolocation_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_stream.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_url.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_geolocation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_request_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_drag_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_download_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_dom.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_menu_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_render_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_web_urlrequest.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_v8.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_xml_reader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_response.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_command_line.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_zip_reader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_keyboard_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_find_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_permission_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_display_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_resource_bundle_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_browser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_origin_whitelist.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_jsdialog_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_client.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_content_filter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_zoom_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_focus_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_tuple.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_list.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_time.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_ptr.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_wrappers.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_export.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_win.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_nplugin_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_multimap.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types_wrappers.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types_win.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_map.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_build.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\drag_download_util.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_webkit_init.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\web_drop_target_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\web_urlrequest_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_request_context.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\request_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\drag_download_util.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_file_system.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_resource_loader_bridge.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_appcache_system.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cookie_store_proxy.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\drag_download_file.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\response_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_network_delegate.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\drag_data_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\request_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\webwidget_host_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_drag_delegate_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\v8_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_webcookiejar_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_request_context.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_file_system.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_webcookiejar_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_navigation_controller.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_devtools_client.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\tracker.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\web_drag_source_win.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\xml_reader_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cookie_manager_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_string_list.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_settings.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\zip_reader_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\nplugin_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_navigation_controller.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cef_process.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_devtools_agent.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_process_ui_thread.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\geolocation_client.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\geolocation_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_webblobregistry_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\scheme_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\sqlite_diagnostics_stub.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\web_drag_source_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\download_util.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\zip_reader_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_request_context_proxy.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\simple_clipboard_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\cookie_store_proxy.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_thread_stub.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cef_thread.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\web_drag_utils_win.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_process_io_thread.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_devtools_scheme_handler.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cef_process.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\web_urlrequest_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\download_util.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cef_thread.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cef_process_ui_thread.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\scheme_registrar_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\webwidget_host.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\dom_document_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_webkit_init.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\response_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_process_sub_thread.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\cef_process_sub_thread.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\drag_download_file.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_dom_storage_system.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_dom_storage_system.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cef_context.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\webwidget_host.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_socket_stream_bridge.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_drag_delegate_win.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_webview_delegate.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_network_delegate.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_database_system.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_devtools_agent.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_zoom_map.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cef_string_types.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_settings.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_file_writer.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\v8_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\web_plugin_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\stream_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\dom_node_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\xml_reader_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\origin_whitelist_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\http_header_utils.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\task_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_devtools_callargs.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_resource_loader_bridge.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\webview_host.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\dom_node_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\geolocation_client.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_time.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\command_line_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_database_system.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\dom_document_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\drag_data_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\web_drop_target_win.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_devtools_client.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\external_protocol_handler_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_devtools_scheme_handler.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_zoom_map.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\scheme_registrar_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_string_map.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_webview_delegate_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cef_string_multimap.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\webview_host.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_impl_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\simple_clipboard_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_webview_delegate.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_appcache_system.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_webkit_glue.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_webkit_glue.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\dom_event_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\cef_process_io_thread.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\cef_process_ui_thread_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_request_context_proxy.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\url_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\stream_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\webview_host_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\browser_file_writer.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_webblobregistry_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cef_context.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\web_drag_utils_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\browser_devtools_callargs.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\cef_time_util.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\browser_socket_stream_bridge.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\dom_event_impl.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\browser_webkit_glue_win.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\http_header_utils.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\cookie_manager_impl.cc">
+      <Filter>libcef</Filter>
+    </ClCompile>
+    <ClInclude Include="libcef\external_protocol_handler.h">
+      <Filter>libcef</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\printing\print_settings.h">
+      <Filter>libcef\printing</Filter>
+    </ClInclude>
+    <ClInclude Include="libcef\printing\win_printing_context.h">
+      <Filter>libcef\printing</Filter>
+    </ClInclude>
+    <ClCompile Include="libcef\printing\print_settings.cc">
+      <Filter>libcef\printing</Filter>
+    </ClCompile>
+    <ClCompile Include="libcef\printing\win_printing_context.cc">
+      <Filter>libcef\printing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\public\common\content_client.cc">
+      <Filter>..\content\public\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\public\common\geoposition.cc">
+      <Filter>..\content\public\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\public\browser\content_browser_client.cc">
+      <Filter>..\content\public\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\common\net\url_request_user_data.cc">
+      <Filter>..\content\common\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\common\net\url_fetcher.cc">
+      <Filter>..\content\common\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\win7_location_api_win.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\network_location_request.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\location_arbitrator_impl.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\wifi_data_provider_common.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\win7_location_provider_win.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\geolocation_provider.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\location_provider.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\wifi_data_provider_common_win.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\wifi_data_provider_win.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\empty_device_data_provider.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\network_location_provider.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\geolocation\device_data_provider.cc">
+      <Filter>..\content\browser\geolocation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\content\browser\net\sqlite_persistent_cookie_store.cc">
+      <Filter>..\content\browser\net</Filter>
+    </ClCompile>
+    <ClInclude Include="..\content\browser\net\sqlite_persistent_cookie_store.h">
+      <Filter>..\content\browser\net</Filter>
+    </ClInclude>
+    <ClCompile Include="..\google_apis\google_api_keys.cc">
+      <Filter>..\google_apis</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

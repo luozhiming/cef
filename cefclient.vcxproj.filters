@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\webkit">
+      <UniqueIdentifier>{6BB4ACEE-077E-03F4-A9A9-4276B7FD2E30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\webkit\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\cef">
+      <UniqueIdentifier>{68212125-9436-8D5B-CA14-3AE2AEDE6E5C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\ui">
+      <UniqueIdentifier>{3ED3C5AE-0459-82A6-2795-7EAB6F83FEC7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings">
+      <UniqueIdentifier>{AF53C09E-2680-6950-3DAD-99BA539008AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\ui\ui_strings">
+      <UniqueIdentifier>{7AA1565F-E779-B05C-95F7-0B5E25DECDC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{71685B5B-5DB1-D3F0-6DF4-FE19B5454C87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\cefclient">
+      <UniqueIdentifier>{D274B8E6-49FB-E975-44BB-8C73F7EB86AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\cefclient\res">
+      <UniqueIdentifier>{1177910C-2DCE-8F2F-24FB-580080DDACDC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{57CA55B8-BCC5-4000-CE3A-58972F82E9CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\internal">
+      <UniqueIdentifier>{1D4CEA7C-B637-77CF-7A24-85ABD36F82A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\wrapper">
+      <UniqueIdentifier>{6EC44E64-2A08-7BA1-DD52-37662FF8BB3A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(IntDir)">
+      <UniqueIdentifier>{2385D4EB-CAEB-D33E-59EB-C687F571392E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(IntDir)\repack">
+      <UniqueIdentifier>{CD39E10C-2374-C878-AD72-BF465D1509A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{A0946190-5491-4D66-7E51-19400E36F078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\_excluded_files">
+      <UniqueIdentifier>{158E591E-B6EA-0C85-8F5A-18EAFA09B4CE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cef.gyp"/>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_da.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_vi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ms.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_lt.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_cs.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-US.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ar.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sw.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_he.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_id.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_am.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ru.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ta.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ca.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_it.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_uk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_et.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-PT.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_kn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-TW.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fa.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_el.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_tr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_mr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_th.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_de.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_bg.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_bn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_es-419.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-CN.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-GB.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_lv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_gu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_es.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ro.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_te.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_nl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_nb.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-BR.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fil.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ml.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ko.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ja.pak">
+      <Filter>$(OutDir)obj\global_intermediate\webkit\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\cef\devtools_resources.pak">
+      <Filter>$(OutDir)obj\global_intermediate\cef</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lt.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-CN.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_da.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_he.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-GB.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_tr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ja.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_id.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_gu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fa.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_cs.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_th.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_kn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es-419.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nb.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_uk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-BR.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_el.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_vi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ru.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_te.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_mr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ca.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ms.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ar.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fil.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-PT.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-US.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_de.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sw.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ro.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-TW.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_et.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_it.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ko.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_am.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ta.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ml.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bg.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\app_locale_settings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ml.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_he.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-BR.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fa.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ta.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sw.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-GB.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_el.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_am.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ro.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_kn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_cs.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_te.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ja.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_id.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_th.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ko.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_gu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_mr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_et.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bn.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bg.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nb.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es-419.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ms.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nl.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_de.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_vi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-TW.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ru.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-CN.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ar.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fil.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hi.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ca.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-US.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lt.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hu.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-PT.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_tr.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_da.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_it.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sv.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_uk.pak">
+      <Filter>$(OutDir)obj\global_intermediate\ui\ui_strings\_excluded_files</Filter>
+    </None>
+    <ClCompile Include="tests\cefclient\client_popup_handler.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\uiplugin.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\clientplugin.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\performance_test_setup.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\scheme_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\osrplugin.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\osrplugin.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\plugin_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\clientplugin.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\resource_util_win.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\resource_util.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\cefclient_switches.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\util.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\string_util.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\string_util.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\plugin_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\Resource.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\cefclient_switches.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\binding_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\binding_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\extension_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\osrenderer.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\performance_test_tests.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\performance_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\osrplugin_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\extension_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\uiplugin.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\download_handler.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\performance_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\cefclient_win.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\cefclient.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\client_handler.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\download_handler.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\osrenderer.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\uiplugin_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\cefclient\osrplugin_test.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\client_popup_handler.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ResourceCompile Include="tests\cefclient\cefclient.rc">
+      <Filter>tests\cefclient</Filter>
+    </ResourceCompile>
+    <ClCompile Include="tests\cefclient\client_handler_win.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\uiplugin_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\client_handler.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\cefclient.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\cefclient\scheme_test.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <None Include="tests\cefclient\res\transparency.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\domaccess.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\logo.png">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\uiplugin.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\localstorage.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\cefclient.ico">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\binding.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\performance.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\dialogs.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\logoball.png">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\small.ico">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\osrplugin.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\plugin.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\xmlhttprequest.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\modaldialog.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\extension.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\modalmain.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <None Include="tests\cefclient\res\other_tests.html">
+      <Filter>tests\cefclient\res</Filter>
+    </None>
+    <ClInclude Include="include\cef_request.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_drag_data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_app.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_scheme.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_proxy_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_runnable.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_menu_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_geolocation_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_url.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_geolocation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_drag_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_download_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_content_filter.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_zip_reader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_find_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_client.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_focus_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_response.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_cookie.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_frame.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_v8.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_life_span_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_load_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_print_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_v8context_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_stream.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_dom.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_request_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_permission_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_zoom_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_render_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_web_urlrequest.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_xml_reader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_base.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_nplugin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_command_line.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_keyboard_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_display_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_resource_bundle_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_web_plugin.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_browser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_origin_whitelist.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_task.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cef_jsdialog_handler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_time.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_ptr.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_multimap.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_nplugin_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_map.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_build.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_list.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_export.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_win.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types_win.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_tuple.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_types_wrappers.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\internal\cef_string_wrappers.h">
+      <Filter>include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wrapper\cef_byte_read_handler.h">
+      <Filter>include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wrapper\cef_xml_object.h">
+      <Filter>include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="include\wrapper\cef_zip_archive.h">
+      <Filter>include\wrapper</Filter>
+    </ClInclude>
+    <None Include="$(IntDir)\repack\de.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\pt-PT.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\it.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ro.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\pl.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\bg.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\zh-TW.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\kn.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\vi.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\el.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\tr.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\hr.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ml.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\nl.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\uk.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\zh-CN.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\gu.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\lt.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\he.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\fr.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ta.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\lv.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\sv.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\sw.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\pt-BR.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\en-US.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\sl.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ar.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ms.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\fi.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\th.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\en-GB.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\bn.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\sr.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\da.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\et.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\nb.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ko.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\mr.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\es.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\te.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ja.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\hu.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\hi.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\id.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\fil.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\am.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ca.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\cs.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\fa.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\es-419.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\ru.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="$(IntDir)\repack\sk.pak">
+      <Filter>$(IntDir)\repack</Filter>
+    </None>
+    <None Include="tools\repack_locales.py">
+      <Filter>tools\_excluded_files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

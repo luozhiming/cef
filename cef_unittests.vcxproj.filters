@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{71685B5B-5DB1-D3F0-6DF4-FE19B5454C87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\unittests">
+      <UniqueIdentifier>{5B5C6057-DDBC-ACE2-7478-453914D140F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\cefclient">
+      <UniqueIdentifier>{D274B8E6-49FB-E975-44BB-8C73F7EB86AD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cef.gyp"/>
+    <ClCompile Include="tests\unittests\geolocation_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\v8_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\run_all_unittests.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\request_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\cookie_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\command_line_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\test_suite.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\stream_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\url_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\content_filter_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\string_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\dom_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\scheme_handler_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\test_handler.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\zip_reader_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\xml_reader_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\unittests\navigation_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\unittests\test_suite.h">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\unittests\test_handler.h">
+      <Filter>tests\unittests</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\unittests\web_urlrequest_unittest.cc">
+      <Filter>tests\unittests</Filter>
+    </ClCompile>
+    <ClInclude Include="tests\cefclient\cefclient_switches.h">
+      <Filter>tests\cefclient</Filter>
+    </ClInclude>
+    <ClCompile Include="tests\cefclient\cefclient_switches.cpp">
+      <Filter>tests\cefclient</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

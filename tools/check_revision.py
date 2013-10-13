@@ -7,6 +7,16 @@ from optparse import OptionParser
 from svn_util import *
 import sys
 
+def get_my_cef_info():
+  url = 'http://chromiumembedded.googlecode.com/svn/trunk/cef1'
+  rev = '1448'
+  return {'url': url, 'revision': rev}
+
+def get_my_chromium_info():
+  url = 'http://src.chromium.org/svn/trunk/src'
+  rev = '194165'
+  return {'url': url, 'revision': rev}
+
 # cannot be loaded as a module
 if __name__ != "__main__":
     sys.stderr.write('This file cannot be loaded as a module!')
@@ -28,14 +38,14 @@ parser.add_option('-q', '--quiet',
 cef_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 # Retrieve the CEF SVN info.
-cef_info = get_svn_info(cef_dir)
+cef_info = get_my_cef_info()
 if not options.quiet:
   sys.stdout.write('Using CEF revision '+cef_info['revision']+' @ '+\
       cef_info['url']+"\n")
 
 # Retrieve the Chromium SVN info.
 src_dir = os.path.join(cef_dir, os.pardir)
-chromium_info = get_svn_info(src_dir)
+chromium_info = get_my_chromium_info()
 if not options.quiet:
   sys.stdout.write('Using Chromium revision '+chromium_info['revision']+' @ '+\
       chromium_info['url']+"\n")

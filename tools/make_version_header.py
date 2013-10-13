@@ -58,9 +58,9 @@ def write_svn_header(header, version):
     year = get_year()
 
     try:
-        revision = svn.get_revision()
+        revision = '1448'
     except:
-        revision = git.get_svn_revision()
+        revision = '1448'
 
     newcontents = '// Copyright (c) '+year+' Marshall A. Greenblatt. All rights reserved.\n'+\
                   '//\n'+\

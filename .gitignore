@@ -1,0 +1,12 @@
+.svn
+/Debug/
+/Release/
+/binary_distrib/
+/ipch/
+*.obj
+*.lib
+*.pyc
+*.suo
+*.sdf
+*.opensdf
+*.vcxproj.user

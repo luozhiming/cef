@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6617FED9-C5D4-4907-BF55-A90062A6683F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cefclient</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\third_party\cygwin\bin\;$(MSBuildProjectDirectory)\..\third_party\python_26\</ExecutablePath>
+    <OutDir>..\cef\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4396;4503;4819;4100;4121;4125;4127;4130;4131;4189;4201;4238;4244;4245;4310;4355;4428;4481;4505;4510;4512;4530;4610;4611;4701;4702;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;shlwapi.lib;rpcrt4.lib;opengl32.lib;glu32.lib;comctl32.lib;locationapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/safeseh /dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;mf.dll;mfplat.dll;mfreadwrite.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetPath).pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4396;4503;4819;4100;4121;4125;4127;4130;4131;4189;4201;4238;4244;4245;4310;4355;4428;4481;4505;4510;4512;4530;4610;4611;4701;4702;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;shlwapi.lib;rpcrt4.lib;opengl32.lib;glu32.lib;comctl32.lib;locationapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;mf.dll;mfplat.dll;mfreadwrite.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>olepro32.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetPath).pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /Oy- %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4396;4503;4819;4100;4121;4125;4127;4130;4131;4189;4201;4238;4244;4245;4310;4355;4428;4481;4505;4510;4512;4530;4610;4611;4701;4702;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;shlwapi.lib;rpcrt4.lib;opengl32.lib;glu32.lib;comctl32.lib;locationapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/safeseh /dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;mf.dll;mfplat.dll;mfreadwrite.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <Profile>true</Profile>
+      <ProgramDatabaseFile>$(TargetPath).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /Oy- %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4396;4503;4819;4100;4121;4125;4127;4130;4131;4189;4201;4238;4244;4245;4310;4355;4428;4481;4505;4510;4512;4530;4610;4611;4701;4702;4706;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;shlwapi.lib;rpcrt4.lib;opengl32.lib;glu32.lib;comctl32.lib;locationapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.0/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;mf.dll;mfplat.dll;mfreadwrite.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>olepro32.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
+      <Profile>true</Profile>
+      <ProgramDatabaseFile>$(TargetPath).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;..\third_party\wtl\include;.;tests;..\third_party\khronos;..\gpu;..;..\third_party\npapi;..\third_party\npapi\bindings;C:\Program Files (x86)\Windows Kits\8.0\Include\shared;C:\Program Files (x86)\Windows Kits\8.0\Include\um;C:\Program Files (x86)\Windows Kits\8.0\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0602;WINVER=0x0602;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_HAS_EXCEPTIONS=0;_SECURE_ATL;CHROMIUM_BUILD;TOOLKIT_VIEWS=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_CONFIGURATION_POLICY;ENABLE_INPUT_SPEECH;ENABLE_NOTIFICATIONS;ENABLE_GPU=1;ENABLE_EGLIMAGE=1;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06020000;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_AUTOMATION=1;ENABLE_GOOGLE_NOW=1;ENABLE_LANGUAGE_DETECTION=1;ENABLE_PRINTING=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_MESSAGE_CENTER=1;ENABLE_SETTINGS_APP=1;ENABLE_MANAGED_USERS=1;USING_CEF_SHARED;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="cef.gyp"/>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_da.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_vi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ms.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_lt.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_cs.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-US.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ar.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sw.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_he.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_id.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_am.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ru.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ta.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ca.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_it.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_uk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_et.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-PT.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_kn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-TW.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fa.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_el.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_tr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_mr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_th.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_de.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_bg.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_bn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_es-419.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-CN.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-GB.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_lv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_gu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_es.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_sl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ro.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_te.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_hr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_nl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_nb.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-BR.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_fil.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ml.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ko.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\webkit\webkit_strings_ja.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lt.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-CN.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_da.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_he.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-GB.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_tr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ja.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_id.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_gu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fa.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_cs.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_th.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_kn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es-419.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nb.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_uk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-BR.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_el.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_vi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ru.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_te.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_mr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ca.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ms.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ar.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fil.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-PT.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-US.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_de.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sw.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ro.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-TW.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_et.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_it.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ko.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_am.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ta.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ml.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bg.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ml.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_he.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-BR.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fa.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ta.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sw.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-GB.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_el.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_am.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ro.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_kn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_cs.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_te.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ja.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_id.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_th.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ko.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_gu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_mr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_et.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bn.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bg.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nb.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es-419.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ms.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nl.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_de.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_vi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-TW.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ru.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-CN.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ar.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fil.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hi.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ca.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-US.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lt.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hu.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-PT.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_tr.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_da.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_it.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sv.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_uk.pak">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="tests\cefclient\res\transparency.html"/>
+    <None Include="tests\cefclient\res\domaccess.html"/>
+    <None Include="tests\cefclient\res\logo.png"/>
+    <None Include="tests\cefclient\res\uiplugin.html"/>
+    <None Include="tests\cefclient\res\localstorage.html"/>
+    <None Include="tests\cefclient\res\cefclient.ico"/>
+    <None Include="tests\cefclient\res\binding.html"/>
+    <None Include="tests\cefclient\res\performance.html"/>
+    <None Include="tests\cefclient\res\dialogs.html"/>
+    <None Include="tests\cefclient\res\logoball.png"/>
+    <None Include="tests\cefclient\res\small.ico"/>
+    <None Include="tests\cefclient\res\osrplugin.html"/>
+    <None Include="tests\cefclient\res\plugin.html"/>
+    <None Include="tests\cefclient\res\xmlhttprequest.html"/>
+    <None Include="tests\cefclient\res\modaldialog.html"/>
+    <None Include="tests\cefclient\res\extension.html"/>
+    <None Include="tests\cefclient\res\modalmain.html"/>
+    <None Include="tests\cefclient\res\other_tests.html"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tests\cefclient\clientplugin.h"/>
+    <ClInclude Include="tests\cefclient\performance_test_setup.h"/>
+    <ClInclude Include="tests\cefclient\osrplugin.h"/>
+    <ClInclude Include="tests\cefclient\resource_util.h"/>
+    <ClInclude Include="tests\cefclient\util.h"/>
+    <ClInclude Include="tests\cefclient\string_util.h"/>
+    <ClInclude Include="tests\cefclient\plugin_test.h"/>
+    <ClInclude Include="tests\cefclient\Resource.h"/>
+    <ClInclude Include="tests\cefclient\cefclient_switches.h"/>
+    <ClInclude Include="tests\cefclient\binding_test.h"/>
+    <ClInclude Include="tests\cefclient\osrenderer.h"/>
+    <ClInclude Include="tests\cefclient\osrplugin_test.h"/>
+    <ClInclude Include="tests\cefclient\extension_test.h"/>
+    <ClInclude Include="tests\cefclient\uiplugin.h"/>
+    <ClInclude Include="tests\cefclient\performance_test.h"/>
+    <ClInclude Include="tests\cefclient\download_handler.h"/>
+    <ClInclude Include="tests\cefclient\client_popup_handler.h"/>
+    <ClInclude Include="tests\cefclient\uiplugin_test.h"/>
+    <ClInclude Include="tests\cefclient\client_handler.h"/>
+    <ClInclude Include="tests\cefclient\cefclient.h"/>
+    <ClInclude Include="tests\cefclient\scheme_test.h"/>
+    <ClInclude Include="include\cef_request.h"/>
+    <ClInclude Include="include\cef_drag_data.h"/>
+    <ClInclude Include="include\cef_app.h"/>
+    <ClInclude Include="include\cef_scheme.h"/>
+    <ClInclude Include="include\cef_proxy_handler.h"/>
+    <ClInclude Include="include\cef_runnable.h"/>
+    <ClInclude Include="include\cef_menu_handler.h"/>
+    <ClInclude Include="include\cef_geolocation_handler.h"/>
+    <ClInclude Include="include\cef_url.h"/>
+    <ClInclude Include="include\cef_geolocation.h"/>
+    <ClInclude Include="include\cef_drag_handler.h"/>
+    <ClInclude Include="include\cef_version.h"/>
+    <ClInclude Include="include\cef_download_handler.h"/>
+    <ClInclude Include="include\cef_content_filter.h"/>
+    <ClInclude Include="include\cef_zip_reader.h"/>
+    <ClInclude Include="include\cef_find_handler.h"/>
+    <ClInclude Include="include\cef_client.h"/>
+    <ClInclude Include="include\cef_focus_handler.h"/>
+    <ClInclude Include="include\cef_response.h"/>
+    <ClInclude Include="include\cef_cookie.h"/>
+    <ClInclude Include="include\cef_frame.h"/>
+    <ClInclude Include="include\cef_v8.h"/>
+    <ClInclude Include="include\cef_life_span_handler.h"/>
+    <ClInclude Include="include\cef_load_handler.h"/>
+    <ClInclude Include="include\cef_print_handler.h"/>
+    <ClInclude Include="include\cef_v8context_handler.h"/>
+    <ClInclude Include="include\cef_stream.h"/>
+    <ClInclude Include="include\cef_dom.h"/>
+    <ClInclude Include="include\cef_request_handler.h"/>
+    <ClInclude Include="include\cef_permission_handler.h"/>
+    <ClInclude Include="include\cef_zoom_handler.h"/>
+    <ClInclude Include="include\cef_render_handler.h"/>
+    <ClInclude Include="include\cef_web_urlrequest.h"/>
+    <ClInclude Include="include\cef_xml_reader.h"/>
+    <ClInclude Include="include\cef_base.h"/>
+    <ClInclude Include="include\cef_nplugin.h"/>
+    <ClInclude Include="include\cef_command_line.h"/>
+    <ClInclude Include="include\cef_keyboard_handler.h"/>
+    <ClInclude Include="include\cef_display_handler.h"/>
+    <ClInclude Include="include\cef_resource_bundle_handler.h"/>
+    <ClInclude Include="include\cef_web_plugin.h"/>
+    <ClInclude Include="include\cef_browser.h"/>
+    <ClInclude Include="include\cef_origin_whitelist.h"/>
+    <ClInclude Include="include\cef_task.h"/>
+    <ClInclude Include="include\cef_jsdialog_handler.h"/>
+    <ClInclude Include="include\internal\cef_time.h"/>
+    <ClInclude Include="include\internal\cef_ptr.h"/>
+    <ClInclude Include="include\internal\cef_string_multimap.h"/>
+    <ClInclude Include="include\internal\cef_nplugin_types.h"/>
+    <ClInclude Include="include\internal\cef_string_types.h"/>
+    <ClInclude Include="include\internal\cef_string_map.h"/>
+    <ClInclude Include="include\internal\cef_build.h"/>
+    <ClInclude Include="include\internal\cef_string_list.h"/>
+    <ClInclude Include="include\internal\cef_export.h"/>
+    <ClInclude Include="include\internal\cef_win.h"/>
+    <ClInclude Include="include\internal\cef_types_win.h"/>
+    <ClInclude Include="include\internal\cef_types.h"/>
+    <ClInclude Include="include\internal\cef_tuple.h"/>
+    <ClInclude Include="include\internal\cef_string.h"/>
+    <ClInclude Include="include\internal\cef_types_wrappers.h"/>
+    <ClInclude Include="include\internal\cef_string_wrappers.h"/>
+    <ClInclude Include="include\wrapper\cef_byte_read_handler.h"/>
+    <ClInclude Include="include\wrapper\cef_xml_object.h"/>
+    <ClInclude Include="include\wrapper\cef_zip_archive.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tests\cefclient\client_popup_handler.cpp"/>
+    <ClCompile Include="tests\cefclient\uiplugin.cpp"/>
+    <ClCompile Include="tests\cefclient\scheme_test.cpp"/>
+    <ClCompile Include="tests\cefclient\osrplugin.cpp"/>
+    <ClCompile Include="tests\cefclient\plugin_test.cpp"/>
+    <ClCompile Include="tests\cefclient\clientplugin.cpp"/>
+    <ClCompile Include="tests\cefclient\resource_util_win.cpp"/>
+    <ClCompile Include="tests\cefclient\cefclient_switches.cpp"/>
+    <ClCompile Include="tests\cefclient\string_util.cpp"/>
+    <ClCompile Include="tests\cefclient\binding_test.cpp"/>
+    <ClCompile Include="tests\cefclient\extension_test.cpp"/>
+    <ClCompile Include="tests\cefclient\performance_test_tests.cpp"/>
+    <ClCompile Include="tests\cefclient\performance_test.cpp"/>
+    <ClCompile Include="tests\cefclient\download_handler.cpp"/>
+    <ClCompile Include="tests\cefclient\cefclient_win.cpp"/>
+    <ClCompile Include="tests\cefclient\cefclient.cpp"/>
+    <ClCompile Include="tests\cefclient\client_handler.cpp"/>
+    <ClCompile Include="tests\cefclient\osrenderer.cpp"/>
+    <ClCompile Include="tests\cefclient\uiplugin_test.cpp"/>
+    <ClCompile Include="tests\cefclient\osrplugin_test.cpp"/>
+    <ClCompile Include="tests\cefclient\client_handler_win.cpp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tests\cefclient\cefclient.rc"/>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="$(IntDir)\repack\uk.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\uk.pak&quot; &quot;$(OutDir)locales\uk.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\uk.pak to $(OutDir)/locales\uk.pak</Message>
+      <Outputs>$(OutDir)\locales\uk.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\vi.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\vi.pak&quot; &quot;$(OutDir)locales\vi.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\vi.pak to $(OutDir)/locales\vi.pak</Message>
+      <Outputs>$(OutDir)\locales\vi.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\th.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\th.pak&quot; &quot;$(OutDir)locales\th.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\th.pak to $(OutDir)/locales\th.pak</Message>
+      <Outputs>$(OutDir)\locales\th.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\am.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\am.pak&quot; &quot;$(OutDir)locales\am.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\am.pak to $(OutDir)/locales\am.pak</Message>
+      <Outputs>$(OutDir)\locales\am.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ca.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ca.pak&quot; &quot;$(OutDir)locales\ca.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ca.pak to $(OutDir)/locales\ca.pak</Message>
+      <Outputs>$(OutDir)\locales\ca.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\te.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\te.pak&quot; &quot;$(OutDir)locales\te.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\te.pak to $(OutDir)/locales\te.pak</Message>
+      <Outputs>$(OutDir)\locales\te.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\bg.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\bg.pak&quot; &quot;$(OutDir)locales\bg.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\bg.pak to $(OutDir)/locales\bg.pak</Message>
+      <Outputs>$(OutDir)\locales\bg.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\en-GB.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\en-GB.pak&quot; &quot;$(OutDir)locales\en-GB.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\en-GB.pak to $(OutDir)/locales\en-GB.pak</Message>
+      <Outputs>$(OutDir)\locales\en-GB.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\sr.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\sr.pak&quot; &quot;$(OutDir)locales\sr.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\sr.pak to $(OutDir)/locales\sr.pak</Message>
+      <Outputs>$(OutDir)\locales\sr.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\hi.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\hi.pak&quot; &quot;$(OutDir)locales\hi.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\hi.pak to $(OutDir)/locales\hi.pak</Message>
+      <Outputs>$(OutDir)\locales\hi.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\sv.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\sv.pak&quot; &quot;$(OutDir)locales\sv.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\sv.pak to $(OutDir)/locales\sv.pak</Message>
+      <Outputs>$(OutDir)\locales\sv.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ro.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ro.pak&quot; &quot;$(OutDir)locales\ro.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ro.pak to $(OutDir)/locales\ro.pak</Message>
+      <Outputs>$(OutDir)\locales\ro.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\zh-CN.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\zh-CN.pak&quot; &quot;$(OutDir)locales\zh-CN.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\zh-CN.pak to $(OutDir)/locales\zh-CN.pak</Message>
+      <Outputs>$(OutDir)\locales\zh-CN.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\id.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\id.pak&quot; &quot;$(OutDir)locales\id.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\id.pak to $(OutDir)/locales\id.pak</Message>
+      <Outputs>$(OutDir)\locales\id.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\fa.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\fa.pak&quot; &quot;$(OutDir)locales\fa.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\fa.pak to $(OutDir)/locales\fa.pak</Message>
+      <Outputs>$(OutDir)\locales\fa.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\da.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\da.pak&quot; &quot;$(OutDir)locales\da.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\da.pak to $(OutDir)/locales\da.pak</Message>
+      <Outputs>$(OutDir)\locales\da.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\cs.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\cs.pak&quot; &quot;$(OutDir)locales\cs.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\cs.pak to $(OutDir)/locales\cs.pak</Message>
+      <Outputs>$(OutDir)\locales\cs.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\gu.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\gu.pak&quot; &quot;$(OutDir)locales\gu.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\gu.pak to $(OutDir)/locales\gu.pak</Message>
+      <Outputs>$(OutDir)\locales\gu.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\fr.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\fr.pak&quot; &quot;$(OutDir)locales\fr.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\fr.pak to $(OutDir)/locales\fr.pak</Message>
+      <Outputs>$(OutDir)\locales\fr.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\pt-PT.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\pt-PT.pak&quot; &quot;$(OutDir)locales\pt-PT.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\pt-PT.pak to $(OutDir)/locales\pt-PT.pak</Message>
+      <Outputs>$(OutDir)\locales\pt-PT.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\it.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\it.pak&quot; &quot;$(OutDir)locales\it.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\it.pak to $(OutDir)/locales\it.pak</Message>
+      <Outputs>$(OutDir)\locales\it.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ta.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ta.pak&quot; &quot;$(OutDir)locales\ta.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ta.pak to $(OutDir)/locales\ta.pak</Message>
+      <Outputs>$(OutDir)\locales\ta.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\lt.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\lt.pak&quot; &quot;$(OutDir)locales\lt.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\lt.pak to $(OutDir)/locales\lt.pak</Message>
+      <Outputs>$(OutDir)\locales\lt.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\tr.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\tr.pak&quot; &quot;$(OutDir)locales\tr.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\tr.pak to $(OutDir)/locales\tr.pak</Message>
+      <Outputs>$(OutDir)\locales\tr.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\et.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\et.pak&quot; &quot;$(OutDir)locales\et.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\et.pak to $(OutDir)/locales\et.pak</Message>
+      <Outputs>$(OutDir)\locales\et.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="tools\repack_locales.py">
+      <FileType>Document</FileType>
+      <Command>call call &quot;$(ProjectDir)..\third_party\cygwin\setup_env.bat&quot; &amp;&amp; set CYGWIN=nontsec&amp;&amp; set INTDIR=$(IntDir)&amp;&amp; set OUTDIR=$(OutDir)&amp;&amp; bash -c &quot;\&quot;python\&quot; \&quot;tools/repack_locales.py\&quot; \&quot;-g\&quot; \&quot;`cygpath -m \\\&quot;${OUTDIR}\\\&quot;`obj/global_intermediate/cef\&quot; \&quot;-s\&quot; \&quot;`cygpath -m \\\&quot;${OUTDIR}\\\&quot;`obj/global_intermediate\&quot; \&quot;-x\&quot; \&quot;`cygpath -m \\\&quot;${INTDIR}\\\&quot;`\&quot; \&quot;am\&quot; \&quot;ar\&quot; \&quot;bg\&quot; \&quot;bn\&quot; \&quot;ca\&quot; \&quot;cs\&quot; \&quot;da\&quot; \&quot;de\&quot; \&quot;el\&quot; \&quot;en-GB\&quot; \&quot;en-US\&quot; \&quot;es-419\&quot; \&quot;es\&quot; \&quot;et\&quot; \&quot;fa\&quot; \&quot;fi\&quot; \&quot;fil\&quot; \&quot;fr\&quot; \&quot;gu\&quot; \&quot;he\&quot; \&quot;hi\&quot; \&quot;hr\&quot; \&quot;hu\&quot; \&quot;id\&quot; \&quot;it\&quot; \&quot;ja\&quot; \&quot;kn\&quot; \&quot;ko\&quot; \&quot;lt\&quot; \&quot;lv\&quot; \&quot;ml\&quot; \&quot;mr\&quot; \&quot;ms\&quot; \&quot;nb\&quot; \&quot;nl\&quot; \&quot;pl\&quot; \&quot;pt-BR\&quot; \&quot;pt-PT\&quot; \&quot;ro\&quot; \&quot;ru\&quot; \&quot;sk\&quot; \&quot;sl\&quot; \&quot;sr\&quot; \&quot;sv\&quot; \&quot;sw\&quot; \&quot;ta\&quot; \&quot;te\&quot; \&quot;th\&quot; \&quot;tr\&quot; \&quot;uk\&quot; \&quot;vi\&quot; \&quot;zh-CN\&quot; \&quot;zh-TW\&quot;&quot;</Command>
+      <Message>repack_locales</Message>
+      <Outputs>$(IntDir)\repack\uk.pak;$(IntDir)\repack\th.pak;$(IntDir)\repack\am.pak;$(IntDir)\repack\ca.pak;$(IntDir)\repack\te.pak;$(IntDir)\repack\bg.pak;$(IntDir)\repack\en-GB.pak;$(IntDir)\repack\sr.pak;$(IntDir)\repack\hi.pak;$(IntDir)\repack\sv.pak;$(IntDir)\repack\ro.pak;$(IntDir)\repack\id.pak;$(IntDir)\repack\en-US.pak;$(IntDir)\repack\fa.pak;$(IntDir)\repack\da.pak;$(IntDir)\repack\cs.pak;$(IntDir)\repack\gu.pak;$(IntDir)\repack\fr.pak;$(IntDir)\repack\pt-PT.pak;$(IntDir)\repack\it.pak;$(IntDir)\repack\lt.pak;$(IntDir)\repack\et.pak;$(IntDir)\repack\he.pak;$(IntDir)\repack\pt-BR.pak;$(IntDir)\repack\kn.pak;$(IntDir)\repack\bn.pak;$(IntDir)\repack\nl.pak;$(IntDir)\repack\ta.pak;$(IntDir)\repack\es-419.pak;$(IntDir)\repack\mr.pak;$(IntDir)\repack\vi.pak;$(IntDir)\repack\fil.pak;$(IntDir)\repack\sl.pak;$(IntDir)\repack\hu.pak;$(IntDir)\repack\ja.pak;$(IntDir)\repack\de.pak;$(IntDir)\repack\el.pak;$(IntDir)\repack\nb.pak;$(IntDir)\repack\tr.pak;$(IntDir)\repack\fi.pak;$(IntDir)\repack\ko.pak;$(IntDir)\repack\lv.pak;$(IntDir)\repack\ml.pak;$(IntDir)\repack\es.pak;$(IntDir)\repack\zh-TW.pak;$(IntDir)\repack\pl.pak;$(IntDir)\repack\hr.pak;$(IntDir)\repack\ms.pak;$(IntDir)\repack\sw.pak;$(IntDir)\repack\zh-CN.pak;$(IntDir)\repack\ru.pak;$(IntDir)\repack\sk.pak;$(IntDir)\repack\ar.pak</Outputs>
+      <AdditionalInputs>$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_kn.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ar.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_th.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ro.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-US.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_en-GB.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nl.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_lv.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_et.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_tr.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_de.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fil.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fr.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_fi.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es-419.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fi.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_sr.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_mr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-BR.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ca.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_id.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sv.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sv.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ms.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sl.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_gu.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_gu.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ko.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_nb.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hu.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hr.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_sl.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_tr.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_es-419.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hu.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_uk.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_vi.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_bg.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es-419.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ta.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_uk.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_sv.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-CN.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nb.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fil.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_kn.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ml.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-TW.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ms.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ms.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_zh-CN.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_es.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_he.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ru.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_it.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_el.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_uk.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bg.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_cs.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_id.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ta.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fa.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_cs.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ca.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_mr.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ar.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sw.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_fil.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-US.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_lt.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_da.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_hi.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_he.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lv.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sk.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pl.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_pl.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ko.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_da.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_fr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ja.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lt.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_en-GB.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_sw.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_te.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_nb.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_it.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-BR.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ml.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ko.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ru.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_da.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_es.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_et.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pl.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_es.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_lv.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ru.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-TW.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_he.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_vi.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_cs.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_de.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_fa.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_mr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_nl.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ro.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_el.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ta.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_bn.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_et.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_am.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_am.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_ja.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-PT.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_th.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ml.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_sw.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_zh-TW.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_sk.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_hu.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sk.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_bn.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_hr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_vi.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_tr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_de.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_hi.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hi.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_fi.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_sl.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-GB.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_nl.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_te.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_hr.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_zh-CN.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_th.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bn.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_pt-PT.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_en-US.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_lt.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_bg.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_kn.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_fa.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_pt-BR.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_pt-PT.pak;$(OutDir)obj\global_intermediate\ui\app_locale_settings\app_locale_settings_el.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ja.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_gu.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_id.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_it.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ca.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_ro.pak;$(OutDir)obj\global_intermediate\ui\ui_strings\ui_strings_ar.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_te.pak;$(OutDir)obj\global_intermediate\webkit\webkit_strings_am.pak</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\he.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\he.pak&quot; &quot;$(OutDir)locales\he.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\he.pak to $(OutDir)/locales\he.pak</Message>
+      <Outputs>$(OutDir)\locales\he.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\pt-BR.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\pt-BR.pak&quot; &quot;$(OutDir)locales\pt-BR.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\pt-BR.pak to $(OutDir)/locales\pt-BR.pak</Message>
+      <Outputs>$(OutDir)\locales\pt-BR.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\sk.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\sk.pak&quot; &quot;$(OutDir)locales\sk.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\sk.pak to $(OutDir)/locales\sk.pak</Message>
+      <Outputs>$(OutDir)\locales\sk.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\kn.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\kn.pak&quot; &quot;$(OutDir)locales\kn.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\kn.pak to $(OutDir)/locales\kn.pak</Message>
+      <Outputs>$(OutDir)\locales\kn.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\bn.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\bn.pak&quot; &quot;$(OutDir)locales\bn.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\bn.pak to $(OutDir)/locales\bn.pak</Message>
+      <Outputs>$(OutDir)\locales\bn.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\nl.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\nl.pak&quot; &quot;$(OutDir)locales\nl.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\nl.pak to $(OutDir)/locales\nl.pak</Message>
+      <Outputs>$(OutDir)\locales\nl.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(OutDir)obj\global_intermediate\cef\devtools_resources.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)obj\global_intermediate\cef\devtools_resources.pak&quot; &quot;$(OutDir)devtools_resources.pak&quot;</Command>
+      <Message>Copying $(OutDir)obj/global_intermediate/cef/devtools_resources.pak to $(OutDir)\devtools_resources.pak</Message>
+      <Outputs>$(OutDir)\devtools_resources.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\es-419.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\es-419.pak&quot; &quot;$(OutDir)locales\es-419.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\es-419.pak to $(OutDir)/locales\es-419.pak</Message>
+      <Outputs>$(OutDir)\locales\es-419.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\en-US.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\en-US.pak&quot; &quot;$(OutDir)locales\en-US.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\en-US.pak to $(OutDir)/locales\en-US.pak</Message>
+      <Outputs>$(OutDir)\locales\en-US.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\mr.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\mr.pak&quot; &quot;$(OutDir)locales\mr.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\mr.pak to $(OutDir)/locales\mr.pak</Message>
+      <Outputs>$(OutDir)\locales\mr.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ml.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ml.pak&quot; &quot;$(OutDir)locales\ml.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ml.pak to $(OutDir)/locales\ml.pak</Message>
+      <Outputs>$(OutDir)\locales\ml.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\fil.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\fil.pak&quot; &quot;$(OutDir)locales\fil.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\fil.pak to $(OutDir)/locales\fil.pak</Message>
+      <Outputs>$(OutDir)\locales\fil.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\sl.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\sl.pak&quot; &quot;$(OutDir)locales\sl.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\sl.pak to $(OutDir)/locales\sl.pak</Message>
+      <Outputs>$(OutDir)\locales\sl.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\hu.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\hu.pak&quot; &quot;$(OutDir)locales\hu.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\hu.pak to $(OutDir)/locales\hu.pak</Message>
+      <Outputs>$(OutDir)\locales\hu.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ja.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ja.pak&quot; &quot;$(OutDir)locales\ja.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ja.pak to $(OutDir)/locales\ja.pak</Message>
+      <Outputs>$(OutDir)\locales\ja.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\de.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\de.pak&quot; &quot;$(OutDir)locales\de.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\de.pak to $(OutDir)/locales\de.pak</Message>
+      <Outputs>$(OutDir)\locales\de.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\el.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\el.pak&quot; &quot;$(OutDir)locales\el.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\el.pak to $(OutDir)/locales\el.pak</Message>
+      <Outputs>$(OutDir)\locales\el.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\nb.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\nb.pak&quot; &quot;$(OutDir)locales\nb.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\nb.pak to $(OutDir)/locales\nb.pak</Message>
+      <Outputs>$(OutDir)\locales\nb.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ko.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ko.pak&quot; &quot;$(OutDir)locales\ko.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ko.pak to $(OutDir)/locales\ko.pak</Message>
+      <Outputs>$(OutDir)\locales\ko.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\fi.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\fi.pak&quot; &quot;$(OutDir)locales\fi.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\fi.pak to $(OutDir)/locales\fi.pak</Message>
+      <Outputs>$(OutDir)\locales\fi.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\es.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\es.pak&quot; &quot;$(OutDir)locales\es.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\es.pak to $(OutDir)/locales\es.pak</Message>
+      <Outputs>$(OutDir)\locales\es.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\zh-TW.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\zh-TW.pak&quot; &quot;$(OutDir)locales\zh-TW.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\zh-TW.pak to $(OutDir)/locales\zh-TW.pak</Message>
+      <Outputs>$(OutDir)\locales\zh-TW.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\pl.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\pl.pak&quot; &quot;$(OutDir)locales\pl.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\pl.pak to $(OutDir)/locales\pl.pak</Message>
+      <Outputs>$(OutDir)\locales\pl.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\hr.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\hr.pak&quot; &quot;$(OutDir)locales\hr.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\hr.pak to $(OutDir)/locales\hr.pak</Message>
+      <Outputs>$(OutDir)\locales\hr.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ms.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ms.pak&quot; &quot;$(OutDir)locales\ms.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ms.pak to $(OutDir)/locales\ms.pak</Message>
+      <Outputs>$(OutDir)\locales\ms.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\sw.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\sw.pak&quot; &quot;$(OutDir)locales\sw.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\sw.pak to $(OutDir)/locales\sw.pak</Message>
+      <Outputs>$(OutDir)\locales\sw.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ru.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ru.pak&quot; &quot;$(OutDir)locales\ru.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ru.pak to $(OutDir)/locales\ru.pak</Message>
+      <Outputs>$(OutDir)\locales\ru.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\lv.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\lv.pak&quot; &quot;$(OutDir)locales\lv.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\lv.pak to $(OutDir)/locales\lv.pak</Message>
+      <Outputs>$(OutDir)\locales\lv.pak</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="$(IntDir)\repack\ar.pak">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;$(OutDir)locales&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(IntDir)repack\ar.pak&quot; &quot;$(OutDir)locales\ar.pak&quot;</Command>
+      <Message>Copying $(IntDir)\repack\ar.pak to $(OutDir)/locales\ar.pak</Message>
+      <Outputs>$(OutDir)\locales\ar.pak</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\third_party\npapi\npapi.vcxproj">
+      <Project>{0BEF8F23-A790-39FF-01E3-FF3BA5EBAFAD}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="libcef.vcxproj">
+      <Project>{C13650D5-CF1A-4259-BE45-B1EBA6280E47}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="libcef_dll_wrapper.vcxproj">
+      <Project>{A9D6DC71-C0DC-4549-AEA0-3B15B44E86A9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>
